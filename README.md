@@ -1,7 +1,7 @@
 
 # DynamicEnv
 
-.NET Standard library that exposes environment variable interactions through a Dynamic object.
+.NET Standard 2.0 library that exposes environment variable interactions through a Dynamic object.
 
 # Getting Started
 
@@ -11,60 +11,93 @@ Install [`Smmx.DynamicEnv`](https://www.nuget.org/packages/Smmx.DynamicEnv) from
 Install-Package Smmx.DynamicEnv
 ```
 
-You can then use the `Env` class to access environment variables succinctly via a dynamic object. You can use either dynamic member syntax or indexes (similar to a string dictionary, although this class does not yet implement any dictionary interface):
+## Usage
+
+You can then use the `Env` class to access environment variables succinctly via a `dynamic` object. You can use either dynamic member syntax or indexes (similar to a string dictionary, although this class does not currently implement any dictionary interface).
+
+First you need an instance of `Env`:
 
 ```C#
 using Smmx.DynamicEnv;
 
-...
+//...
 
-//First you need an instance of Env
 dynamic env = new Env();
 
-//Or explicitly specify the environment target (the default when none is specified, as above, is Process)
+//Or explicitly specify the environment target (the default when none is
+//specified, like the line above, is EnvironmentVariableTarget.Process)
 env = new Env(EnvironmentVariableTarget.Process)
 
 //Or you can use one of the pre-initialized static instances:
 env = Env.Machine; //Targets machine-level environment variables (Windows systems only)
 env = Env.User;    //Targets user-level environment variables (Windows systems only)
 env = Env.Process; //Targets process-level environment variables (this is the default)
+```
 
-//Read an environment variable; note, their names may be case sensitive on some platforms (Linux/Mac):
+Read an environment variable; note, their names may be case sensitive on some platforms (Linux/Mac):
+
+```C#
 string path;
 path = env.PATH;
 path = env["PATH"];
+```
 
-//If the environment variable doesn't exist, then it'll return a null:
+If the environment variable doesn't exist, then it'll return a `null`:
+
+```C#
 string empty;
 empty = env.ThisVarDoesntExist;
 empty = env["ThisVarDoesntExist"];
 Assert.True(empty == null);
+```
 
-//You can also set environment variables like this:
+You can also set environment variables like this:
+
+```C#
 env.DataRoot = @"C:\Data";
 env["DataRoot"] = @"C:\Data";
+```
 
-//Clearing/deleting an environment variable is typically done by setting as null:
+Deleting/clearing an environment variable is typically done by setting as `null`:
+
+```C#
 env.DataRoot = null;
 env["DataRoot"] = null;
+```
 
-//Enumerate environment variable names:
+Enumerate environment variable names:
+
+```C#
 IEnumerable<string> varNames = env.GetDynamicMemberNames();
-foreach (string key in varNames) {
-    string val = env[key];
-    Console.WriteLine($"{key}: {val}");
+foreach (string name in varNames) {
+    string val = env[name];
+    Console.WriteLine($"{name}: {val}");
 }
+```
 
-//An invalid value type (currently anything other than String) throws an ArgumentException:
+## Errors
+
+An unsupported value type (currently anything other than `String`) throws an `ArgumentException`:
+
+```C#
 env.Test = 454;
+```
 
-//An invalid index types (currently anthing other than String) throws an IndexOutOfRangeException:
+An unsupported index type (currently anthing other than `String`) throws an `IndexOutOfRangeException`:
+
+```C#
 env[12] = "this won't work!";
+```
 
-//And finally here's a gotcha that causes a RuntimeBinderException because .NET can't determine whether the null result is a string or a char[] parameter to the Console.WriteLine(...) method:
+And finally here's a gotcha that causes a `RuntimeBinderException` because .NET can't determine whether the `null` result is a `string` or a `char[]` parameter to the `Console.WriteLine(...)` method:
+
+```C#
 Console.WriteLine(env.ThisVarDoesntExist);
+```
 
-//You can work around this by casting to string:
+You can work around this by casting to `string`:
+
+```C#
 Console.WriteLine($"{env.ThisVarDoesntExist}");
 Console.WriteLine((string)env.ThisVarDoesntExist);
 ```
