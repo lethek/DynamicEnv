@@ -1,11 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
 
     <IsPackable>false</IsPackable>
 
-    <RootNamespace>Smmx.DynamicEnv</RootNamespace>
+    <RootNamespace>DynamicEnv</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Smmx.DynamicEnv\Smmx.DynamicEnv.csproj" />
+    <ProjectReference Include="..\..\src\DynamicEnv\DynamicEnv.csproj" />
   </ItemGroup>
 
 </Project>

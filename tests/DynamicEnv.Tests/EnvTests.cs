@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Xunit;
 
 
-namespace Smmx.DynamicEnv
+namespace DynamicEnv
 {
 
     public class EnvTests

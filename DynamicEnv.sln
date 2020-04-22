@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F577BAC1-315D-48D5-A7E8-0E8FA0223EA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smmx.DynamicEnv", "src\Smmx.DynamicEnv\Smmx.DynamicEnv.csproj", "{F6BC8F1D-6253-421F-A6C2-C10AFFCC6548}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicEnv", "src\DynamicEnv\DynamicEnv.csproj", "{F6BC8F1D-6253-421F-A6C2-C10AFFCC6548}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{8E6F89A6-DA60-487E-B829-65D9D8914513}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smmx.DynamicEnv.Tests", "tests\Smmx.DynamicEnv.Tests\Smmx.DynamicEnv.Tests.csproj", "{9053391F-3E5C-445A-993C-5C94C6B00508}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicEnv.Tests", "tests\DynamicEnv.Tests\DynamicEnv.Tests.csproj", "{9053391F-3E5C-445A-993C-5C94C6B00508}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,9 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{F6BC8F1D-6253-421F-A6C2-C10AFFCC6548}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -49,8 +46,14 @@ Global
 		{9053391F-3E5C-445A-993C-5C94C6B00508}.Release|x86.ActiveCfg = Release|Any CPU
 		{9053391F-3E5C-445A-993C-5C94C6B00508}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F6BC8F1D-6253-421F-A6C2-C10AFFCC6548} = {F577BAC1-315D-48D5-A7E8-0E8FA0223EA3}
 		{9053391F-3E5C-445A-993C-5C94C6B00508} = {8E6F89A6-DA60-487E-B829-65D9D8914513}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D1271F3-E3D7-4EC6-8694-00F238BD1CD1}
 	EndGlobalSection
 EndGlobal

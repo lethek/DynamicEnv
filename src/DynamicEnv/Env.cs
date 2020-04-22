@@ -5,7 +5,7 @@ using System.Dynamic;
 using System.Linq;
 
 
-namespace Smmx.DynamicEnv
+namespace DynamicEnv
 {
 
     public class Env : DynamicObject

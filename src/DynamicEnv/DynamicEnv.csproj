@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageLicenseFile></PackageLicenseFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/lethek/DynamicEnv</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <Copyright>Copyright © Michael Monsour 2020</Copyright>
+    <Company />
+    <Authors>Michael Monsour</Authors>
+    <PackageId>DynamicEnv</PackageId>
+    <Product>DynamicEnv</Product>
+    <PackageProjectUrl>https://github.com/lethek/DynamicEnv</PackageProjectUrl>
+    <PackageTags>dynamicenv, dynamic, environment, env, variables</PackageTags>
+    <Description>.NET Standard 2.0 library that exposes environment variable interactions through a Dynamic object.</Description>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+
+</Project>

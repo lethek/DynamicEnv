@@ -1,14 +1,18 @@
 
 # DynamicEnv
 
+![.NET Core Build](https://github.com/lethek/DynamicEnv/workflows/build/badge.svg)
+[![NuGet Stats](https://img.shields.io/nuget/v/DynamicEnv.svg)](https://www.nuget.org/packages/DynamicEnv)
+[![GitHub license](https://img.shields.io/github/license/lethek/DynamicEnv)](https://github.com/lethek/DynamicEnv/blob/master/LICENSE)
+
 .NET Standard 2.0 library that exposes environment variable interactions through a Dynamic object.
 
 # Getting Started
 
-Install [`Smmx.DynamicEnv`](https://www.nuget.org/packages/Smmx.DynamicEnv) from NuGet. E.g. from Visual Studio's Package Manager Console:
+Install [`DynamicEnv`](https://www.nuget.org/packages/DynamicEnv) from NuGet. E.g. from Visual Studio's Package Manager Console:
 
 ```PowerShell
-Install-Package Smmx.DynamicEnv
+Install-Package DynamicEnv
 ```
 
 ## Usage
@@ -18,7 +22,7 @@ You can then use the `Env` class to access environment variables succinctly via 
 First you need an instance of `Env`:
 
 ```C#
-using Smmx.DynamicEnv;
+using DynamicEnv;
 
 //...
 
