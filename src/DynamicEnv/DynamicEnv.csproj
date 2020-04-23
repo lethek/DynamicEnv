@@ -14,7 +14,7 @@
     <PackageTags>dynamicenv, dynamic, environment, env, variables</PackageTags>
     <Description>.NET Standard 2.0 library that exposes environment variable interactions through a Dynamic object.</Description>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
