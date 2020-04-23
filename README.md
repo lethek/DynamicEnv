@@ -87,7 +87,7 @@ An unsupported value type (currently anything other than `String`) throws an `Ar
 env.Test = 454;
 ```
 
-An unsupported index type (currently anthing other than `String`) throws an `IndexOutOfRangeException`:
+An unsupported index type (currently anything other than `String`) throws an `IndexOutOfRangeException`:
 
 ```C#
 env[12] = "this won't work!";
