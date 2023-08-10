@@ -1,11 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-
+    <TargetFrameworks>net6.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <CheckEolTargetFramework>false</CheckEolTargetFramework>
     <IsPackable>false</IsPackable>
-
+    <IsTestProject>true</IsTestProject>
     <RootNamespace>DynamicEnv</RootNamespace>
+
+    <Authors>Michael Monsour</Authors>
+    <Copyright>Copyright © Michael Monsour 2020</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>

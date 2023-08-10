@@ -2,26 +2,26 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <CheckEolTargetFramework>false</CheckEolTargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IsPackable>true</IsPackable>
+
+    <Authors>Michael Monsour</Authors>
+    <Copyright>Copyright © 2020 Michael Monsour</Copyright>
+    <Description>Exposes environment variable interactions through a Dynamic object.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>dynamicenv;dynamic;environment;env;variables</PackageTags>
+    <PackageProjectUrl>https://github.com/lethek/DynamicEnv</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/lethek/DynamicEnv</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <Copyright>Copyright © Michael Monsour 2020</Copyright>
-    <Company />
-    <Authors>Michael Monsour</Authors>
-    <Product>DynamicEnv</Product>
-    <PackageId>DynamicEnv</PackageId>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/lethek/DynamicEnv</PackageProjectUrl>
-    <PackageTags>dynamicenv, dynamic, environment, env, variables</PackageTags>
-    <Description>.NET Standard 2.0 library that exposes environment variable interactions through a Dynamic object.</Description>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
+    <None Include="..\..\README.md" Pack="true" Visible="false" PackagePath="\" />
   </ItemGroup>
 
 </Project>
